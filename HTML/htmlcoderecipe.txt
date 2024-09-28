@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - The Vegan Vine</title>
+    <link rel="stylesheet" href="recipes-style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="logo">The Vegan Vine</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="recipes.html" class="dropbtn">Recipes</a>
+                        <div class="dropdown-content">
+                            <a href="#breakfast">Breakfast</a>
+                            <a href="#lunch">Lunch</a>
+                            <a href="#dinner">Dinner</a>
+                            <a href="#snack">Snack</a>
+                            <a href="#salad">Salad</a>
+                            <a href="#drinks">Drinks</a>
+                            <a href="#dessert">Dessert</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Delicious Vegan Recipes</h1>
+                <p>Explore our collection of plant-based recipes for every meal and occasion.</p>
+            </div>
+        </section>
+
+        <section class="recipes">
+            <div class="container">
+                <h2 id="breakfast">Breakfast</h2>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="photo 16.png" alt="Vegan Pancakes">
+                        <h3>Fluffy Vegan Pancakes</h3>
+                        <p>Start your day with these light and fluffy vegan pancakes.</p>
+                        <button class="read-more" data-recipe="vegan-pancakes">Read More</button>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="photo17.png" alt="Tofu Scramble">
+                        <h3>Savory Tofu Scramble</h3>
+                        <p>A protein-packed breakfast that's quick and easy to make.</p>
+                        <button class="read-more" data-recipe="tofu-scramble">Read More</button>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="photo19.png" alt="Overnight Oats">
+                        <h3>Berry Bliss Overnight Oats</h3>
+                        <p>Prepare this delicious breakfast the night before for a hassle-free morning.</p>
+                        <button class="read-more" data-recipe="overnight-oats">Read More</button>
+                    </div>
+                </div>
+
+                <h2 id="lunch">Lunch</h2>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="photo20.png" alt="Vegan Buddha Bowl">
+                        <h3>Colorful Vegan Buddha Bowl</h3>
+                        <p>A nourishing bowl packed with vibrant veggies and plant-based protein.</p>
+                        <button class="read-more" data-recipe="buddha-bowl">Read More</button>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="photo21.png" alt="Chickpea Salad Sandwich">
+                        <h3>Chickpea 'Tuna' Salad Sandwich</h3>
+                        <p>A plant-based twist on the classic tuna salad sandwich.</p>
+                        <button class="read-more" data-recipe="chickpea-sandwich">Read More</button>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="photo22.png" alt="Lentil Soup">
+                        <h3>Hearty Lentil Soup</h3>
+                        <p>A comforting and filling soup that's perfect for chilly days.</p>
+                        <button class="read-more" data-recipe="lentil-soup">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Add similar sections for Dinner, Snack, Salad, Drinks, and Dessert -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Vegan Vine</h3>
+                    <p>Nurturing a community of conscious eaters and compassionate living advocates.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect with Us</h3>
+                    <p>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Pinterest</a>
+                    </p>
+                </div>
+            </div>
+            <div class="center-content">
+                <p>&copy; 2023 The Vegan Vine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Recipe Image">
+            <div id="modal-description"></div>
+            <h3>Ingredients:</h3>
+            <ul id="modal-ingredients"></ul>
+            <h3>Instructions:</h3>
+            <ol id="modal-instructions"></ol>
+            <h3>Benefits:</h3>
+            <ul id="modal-benefits"></ul>
+        </div>
+    </div>
+
+    <script src="recipes-script.js"></script>
+</body>
+</html>

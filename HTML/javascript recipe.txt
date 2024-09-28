@@ -1,0 +1,85 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('recipe-modal');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const readMoreButtons = document.querySelectorAll('.read-more');
+
+    const recipes = {
+        'vegan-pancakes': {
+            title: 'Fluffy Vegan Pancakes',
+            image: 'photo 16.png',
+            description: 'Start your day with these light and fluffy vegan pancakes. They\'re easy to make and absolutely delicious!',
+            ingredients: [
+                '1 cup all-purpose flour',
+                '2 tablespoons sugar',
+                '1 tablespoon baking powder',
+                '1/4 teaspoon salt',
+                '1 cup non-dairy milk',
+                '2 tablespoons vegetable oil',
+                '1 teaspoon vanilla extract'
+            ],
+            instructions: [
+                'In a large bowl, whisk together flour, sugar, baking powder, and salt.',
+                'In another bowl, mix non-dairy milk, vegetable oil, and vanilla extract.',
+                'Pour the wet ingredients into the dry ingredients and mix until just combined. Don\'t overmix!',
+                'Heat a non-stick pan or griddle over medium heat.',
+                'Pour 1/4 cup of batter for each pancake. Cook until bubbles form on top, then flip and cook the other side until golden brown.',
+                'Serve with your favorite toppings like maple syrup, fresh fruits, or vegan butter.'
+            ],
+            benefits: [
+                'Plant-based and cholesterol-free',
+                'Can be made gluten-free with alternative flour',
+                'Customizable with various toppings for added nutrients',
+                'Great source of energy to start your day'
+            ]
+        },
+        // Add more recipes here...
+    };
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const recipe = recipes[this.dataset.recipe];
+            if (recipe) {
+                document.getElementById('modal-title').textContent = recipe.title;
+                document.getElementById('modal-image').src = recipe.image;
+                document.getElementById('modal-image').alt = recipe.title;
+                document.getElementById('modal-description').textContent = recipe.description;
+
+                const ingredientsList = document.getElementById('modal-ingredients');
+                ingredientsList.innerHTML = '';
+                recipe.ingredients.forEach(ingredient => {
+                    const li = document.createElement('li');
+                    li.textContent = ingredient;
+                    ingredientsList.appendChild(li);
+                });
+
+                const instructionsList = document.getElementById('modal-instructions');
+                instructionsList.innerHTML = '';
+                recipe.instructions.forEach(instruction => {
+                    const li = document.createElement('li');
+                    li.textContent = instruction;
+                    instructionsList.appendChild(li);
+                });
+
+                const benefitsList = document.getElementById('modal-benefits');
+                benefitsList.innerHTML = '';
+                recipe.benefits.forEach(benefit => {
+                    const li = document.createElement('li');
+                    li.textContent = benefit;
+                    benefitsList.appendChild(li);
+                });
+
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+});

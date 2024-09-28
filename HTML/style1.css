@@ -1,0 +1,138 @@
+/* Variables */
+:root {
+    --primary-color: #4CAF50; /* Green for plant-based theme */
+    --secondary-color: #2E7D32;
+    --font-color: #333;
+    --background-color: #f9f9f9;
+    --cta-color: #FF9800;
+    --font-family: 'Arial', sans-serif;
+    --header-height: 70px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--primary-color);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-right: 15px;
+}
+
+header ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.cta-button {
+    background-color: var(--cta-color);
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.intro, .featured-posts, .categories, .newsletter {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-posts .posts-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.featured-posts .post {
+    width: 30%;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category {
+    width: 20%;
+}
+
+.newsletter form {
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: var(--cta-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Success Stories - The Vegan Vine</title>
+    <link rel="stylesheet" href="blog-style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="logo">The Vegan Vine</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="recipes.html" class="dropbtn">Recipes</a>
+                        <div class="dropdown-content">
+                            <a href="recipes.html#breakfast">Breakfast</a>
+                            <a href="recipes.html#lunch">Lunch</a>
+                            <a href="recipes.html#dinner">Dinner</a>
+                            <a href="recipes.html#snack">Snack</a>
+                            <a href="recipes.html#salad">Salad</a>
+                            <a href="recipes.html#drinks">Drinks</a>
+                            <a href="recipes.html#dessert">Dessert</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Vegan Success Stories</h1>
+                <p>Inspiring transformations and positive impacts on health and the environment.</p>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <div class="container">
+                <div class="post-grid" id="postGrid">
+                    <!-- Blog posts will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="share-story">
+            <div class="container">
+                <h2>Share Your Story</h2>
+                <p>Inspire others with your vegan journey! Submit your story and transformation photos.</p>
+                <button id="openFormBtn" class="cta-button">Share Your Story</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Vegan Vine</h3>
+                    <p>Nurturing a community of conscious eaters and compassionate living advocates.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect with Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Pinterest">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="center-content">
+                <p>&copy; 2023 The Vegan Vine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="storyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Vegan Success Story</h2>
+            <form id="storyForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="story">Your Story:</label>
+                <textarea id="story" name="story" required></textarea>
+
+                <label for="beforePhoto">Before Photo:</label>
+                <input type="file" id="beforePhoto" name="beforePhoto" accept="image/*" required>
+
+                <label for="afterPhoto">After Photo:</label>
+                <input type="file" id="afterPhoto" name="afterPhoto" accept="image/*" required>
+
+                <button type="submit" class="submit-button">Submit Your Story</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="blog-script.js"></script>
+</body>
+</html>
